@@ -1,0 +1,13 @@
+.component-share {
+  height: calc(100vh - 90px);
+
+  @media (min-width: 768px) {
+    height: calc(100vh - 130px);
+  }
+}
+
+.usdg-container {
+  .banner-icon {
+    margin-bottom: 10px;
+  }
+}

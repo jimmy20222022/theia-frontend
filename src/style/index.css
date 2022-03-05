@@ -1,0 +1,90 @@
+@font-face {
+  font-family: 'EuclidSquare';
+  src: local('EuclidSquare'), url('../../styles/fonts/EuclidSquare/EuclidSquare-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'EuclidSquare';
+  src: local('EuclidSquare'),
+    url('../../styles/fonts/EuclidSquare/EuclidSquare-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'EuclidSquare';
+  src: local('EuclidSquare'), url('../../styles/fonts/EuclidSquare/EuclidSquare-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'EuclidSquare';
+  src: local('EuclidSquare'), url('../../styles/fonts/EuclidSquare/EuclidSquare-Light.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'EuclidSquare';
+  src: local('EuclidSquare'),
+    url('../../styles/fonts/EuclidSquare/EuclidSquare-LightItalic.ttf') format('truetype');
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'EuclidSquare';
+  src: local('EuclidSquare'), url('../../styles/fonts/EuclidSquare/EuclidSquare-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'EuclidSquare';
+  src: local('EuclidSquare'),
+    url('../../styles/fonts/EuclidSquare/EuclidSquare-MediumItalic.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'EuclidSquare';
+  src: local('EuclidSquare'), url('../../styles/fonts/EuclidSquare/EuclidSquare-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'EuclidSquare';
+  src: local('EuclidSquare'),
+    url('../../styles/fonts/EuclidSquare/EuclidSquare-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'EuclidSquare';
+  src: local('EuclidSquare'),
+    url('../../styles/fonts/EuclidSquare/EuclidSquare-SemiBoldItalic.ttf') format('truetype');
+  font-weight: 600;
+  font-style: italic;
+}
+
+body {
+  margin: 0;
+  font-family: 'EuclidSquare';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: 'EuclidSquare';
+}
+
+#root {
+  overflow-x: hidden;
+  font-family: 'EuclidSquare';
+}
