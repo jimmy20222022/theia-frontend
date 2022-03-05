@@ -16,7 +16,7 @@ import useToast from 'hooks/useToast'
 import { clearUserStates } from '../utils/clearUserStates'
 
 const useAuth = () => {
-  const { chainId, activate, deactivate } = useWeb3React()
+  const { activate, deactivate } = useWeb3React()
   const { toastError } = useToast()
 
   const login = useCallback(
@@ -56,8 +56,8 @@ const useAuth = () => {
 
   const logout = useCallback(() => {
     deactivate()
-    clearUserStates(chainId)
-  }, [deactivate, chainId])
+    clearUserStates()
+  }, [deactivate])
 
   return { login, logout }
 }

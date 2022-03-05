@@ -1,15 +1,9 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { GiHamburgerMenu } from 'react-icons/gi'
 import { GrClose } from 'react-icons/gr'
 import styled from 'styled-components'
 import Link from 'next/link'
 import UserMenu from '../../components/Menu/UserMenu'
-
-const logo = './images/logo.svg'
-
-const LinkEle = styled(Link)`
-  text-decoration: none;
-`
 
 const Header = styled.header`
   height: 90px;
@@ -63,59 +57,6 @@ const NavList = styled.ul`
   }
 `
 
-const NavItem = styled.li`
-  height: 60px;
-
-  @media (min-width: 768px) {
-    height: unset;
-  }
-`
-
-const NavItemLink = styled(Link)`
-  text-decoration: none;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 18px;
-  color: #000000;
-  position: relative;
-
-  &:hover {
-    color: #000000;
-  }
-
-  &:before {
-    content: '';
-    position: absolute;
-    bottom: -7px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 0;
-    height: 2px;
-    background: #000000;
-    transition: all 0.25s ease-in-out;
-  }
-
-  &:hover:before {
-    width: 80%;
-  }
-
-  &.isActive::before {
-    content: '';
-    position: absolute;
-    bottom: -7px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80%;
-    height: 2px;
-    background: #000000;
-  }
-
-  @media (min-width: 768px) {
-    font-size: 15px;
-  }
-`
-
 const HamburgerIcon = styled(GiHamburgerMenu)`
   width: 26px;
   height: 26px;
@@ -158,7 +99,7 @@ function TheHeader() {
     <Header>
       <DIV>
         <div className="col-6 d-md-none d-flex p-3">
-          <Link href="/main">
+          <Link href="/main" passHref>
             <img src="./images/logo.svg" alt="logo" />
           </Link>
         </div>
@@ -173,7 +114,7 @@ function TheHeader() {
           <CloseIcon className="d-md-none" onClick={() => setIsActiveMenu(false)} />
 
           <p className="d-none d-lg-block">
-            <Link href="/main">
+            <Link href="/main" passHref>
               <img src="./images/logo.svg" alt="logo" />
             </Link>
           </p>

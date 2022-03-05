@@ -2,7 +2,7 @@ import * as Sentry from '@sentry/react'
 import { connectorLocalStorageKey } from '@theia-my/uikit'
 import { connectorsByName } from './web3React'
 
-export const clearUserStates = (chainId: number) => {
+export const clearUserStates = () => {
   Sentry.configureScope((scope) => scope.setUser(null))
   // This localStorage key is set by @web3-react/walletconnect-connector
   if (window.localStorage.getItem('walletconnect')) {

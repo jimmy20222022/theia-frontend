@@ -1,9 +1,9 @@
-import { ResetCSS } from '@theia-my/uikit'
-import { ToastListener } from 'contexts/ToastsContext'
-import type { AppProps } from 'next/app'
+import {ResetCSS} from '@theia-my/uikit'
+import {ToastListener} from 'contexts/ToastsContext'
+import type {AppProps} from 'next/app'
 import Head from 'next/head'
-import React, { Fragment } from 'react'
-import { NextPage } from 'next'
+import React, {Fragment} from 'react'
+import {NextPage} from 'next'
 import ErrorBoundary from 'components/ErrorBoundary'
 import Providers from 'Providers'
 import GlobalStyle from 'style/Global'
@@ -18,7 +18,7 @@ import '../style/animation.scss'
 //     DECIMAL_PLACES: 80,
 // })
 
-function GlobalHooks() {}
+// function GlobalHooks() {}
 
 function MyApp(props: AppProps) {
   return (

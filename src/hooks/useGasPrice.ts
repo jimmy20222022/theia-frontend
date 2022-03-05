@@ -1,5 +1,5 @@
-import { CHAIN_ID } from '../config/constants/networks'
 import { ChainId } from '@pancakeswap/sdk'
+import { CHAIN_ID } from '../config/constants/networks'
 import { GAS_PRICE, GAS_PRICE_GWEI } from '../config/constants/gas'
 
 export function useGasPrice(): string {

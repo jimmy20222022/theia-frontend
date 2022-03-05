@@ -1,6 +1,5 @@
 import { ChainId, Token } from '@pancakeswap/sdk'
 import { CHAIN_ID } from './networks'
-import { SerializedToken } from './types'
 
 const { MAINNET, TESTNET } = ChainId
 
@@ -2076,6 +2075,6 @@ const tokens = () => {
 
 const unserializedTokens = tokens()
 
-type SerializedTokenList = Record<keyof typeof unserializedTokens, SerializedToken>
+// type SerializedTokenList = Record<keyof typeof unserializedTokens, SerializedToken>
 
 export default unserializedTokens

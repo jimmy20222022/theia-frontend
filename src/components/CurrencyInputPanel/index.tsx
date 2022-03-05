@@ -1,5 +1,5 @@
 import { Currency, Pair } from '@pancakeswap/sdk'
-import { Box, Button, Flex, useModal } from '@theia-my/uikit'
+import { Box, Button, Flex } from '@theia-my/uikit'
 import styled from 'styled-components'
 import useActiveWeb3React from 'hooks/useActiveWeb3React'
 
@@ -59,12 +59,12 @@ export default function CurrencyInputPanel({
   onMax,
   showMaxButton,
   label,
-  onCurrencySelect,
+  // onCurrencySelect,
   currency,
   disableCurrencySelect = false,
-  otherCurrency,
+  // otherCurrency,
   id,
-  showCommonBases,
+  // showCommonBases,
 }: CurrencyInputPanelProps) {
   const { account } = useActiveWeb3React()
 

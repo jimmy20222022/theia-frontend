@@ -10,7 +10,7 @@ const ThemeProviderWrapper = (props) => {
   return <ThemeProvider theme={light} {...props} />
 }
 
-const Providers: React.FC<{}> = ({ children }) => {
+const Providers: React.FC = ({ children }) => {
   return (
     <Web3ReactProvider getLibrary={getLibrary}>
       <ToastsProvider>

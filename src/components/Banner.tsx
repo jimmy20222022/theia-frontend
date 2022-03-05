@@ -1,7 +1,6 @@
 import { useEffect } from 'react'
 import AOS from 'aos'
 import styled from 'styled-components'
-import Link from 'next/link'
 import { Button, ButtonSecondary } from './Button'
 
 const Wrapper = styled.div`
