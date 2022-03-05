@@ -28,6 +28,15 @@ const config = {
   images: {
     domains: ['static-nft.pancakeswap.com'],
   },
+  async redirects() {
+    return [
+      {
+        source: '/',
+        destination: '/main',
+        permanent: true,
+      },
+    ]
+  },
 }
 
 module.exports = withBundleAnalyzer(withSentryConfig(config, sentryWebpackPluginOptions))
