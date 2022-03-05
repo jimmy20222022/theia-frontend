@@ -26,7 +26,7 @@ const HomeWrapper = styled.div`
 function Home() {
   const data = {
     logo: iconSquare,
-    title: 'Preserving asset value <br /> during tough times',
+    title: 'Preserving asset value during tough times',
     iconillustration: iconIllustration,
     background: '#e0d7a5',
     buttonPrimary: 'Launch Swap',
