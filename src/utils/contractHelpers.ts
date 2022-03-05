@@ -9,14 +9,14 @@ import marketPlaceAbi from 'config/abi/marketplace.json'
 import bep20Abi from 'config/abi/erc20.json'
 
 // Types
-import type {Erc20,} from 'config/abi/types'
+import type { Erc20 } from 'config/abi/types'
 import {
   getMarketPlaceAddress,
   getPUSDGAddress,
   getSUSDGAddress,
   getUSDCAddress,
-  getUSDGAddress
-} from "./addressHelpers";
+  getUSDGAddress,
+} from './addressHelpers'
 
 const getContract = (abi: any, address: string, signer?: Signer | Provider) => {
   const signerOrProvider = signer ?? simpleRpcProvider

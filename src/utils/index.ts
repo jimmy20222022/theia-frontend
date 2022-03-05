@@ -1,6 +1,6 @@
-import {getAddress} from '@ethersproject/address'
-import {ChainId} from '@pancakeswap/sdk'
-import {BASE_BSC_SCAN_URLS} from '../config'
+import { getAddress } from '@ethersproject/address'
+import { ChainId } from '@pancakeswap/sdk'
+import { BASE_BSC_SCAN_URLS } from '../config'
 
 // returns the checksummed address if the address is valid, otherwise returns false
 export function isAddress(value: any): string | false {

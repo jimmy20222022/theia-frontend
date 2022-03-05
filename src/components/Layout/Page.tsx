@@ -23,37 +23,37 @@ const StyledPage = styled(Container)`
 `
 
 export const PageMeta: React.FC<{ symbol?: string }> = ({ symbol }) => {
-    const { t } = useTranslation()
-    const { pathname } = useRouter()
+  const { t } = useTranslation()
+  const { pathname } = useRouter()
 
-    const pageMeta = getCustomMeta(pathname, t) || {}
-    const { title, description, image } = { ...DEFAULT_META, ...pageMeta }
-    let pageTitle = title
-    if (symbol) {
-        pageTitle = [symbol, title].join(' - ')
-    }
+  const pageMeta = getCustomMeta(pathname, t) || {}
+  const { title, description, image } = { ...DEFAULT_META, ...pageMeta }
+  let pageTitle = title
+  if (symbol) {
+    pageTitle = [symbol, title].join(' - ')
+  }
 
-    return (
-        <Head>
-            <title>{pageTitle}</title>
-            <meta property="og:title" content={title} />
-            <meta property="og:description" content={description} />
-            <meta property="og:image" content={image} />
-        </Head>
-    )
+  return (
+    <Head>
+      <title>{pageTitle}</title>
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:image" content={image} />
+    </Head>
+  )
 }
 
 interface PageProps extends React.HTMLAttributes<HTMLDivElement> {
-    symbol?: string
+  symbol?: string
 }
 
 const Page: React.FC<PageProps> = ({ children, symbol, ...props }) => {
-    return (
-        <>
-            <PageMeta symbol={symbol} />
-            <StyledPage {...props}>{children}</StyledPage>
-        </>
-    )
+  return (
+    <>
+      <PageMeta symbol={symbol} />
+      <StyledPage {...props}>{children}</StyledPage>
+    </>
+  )
 }
 
 export default Page

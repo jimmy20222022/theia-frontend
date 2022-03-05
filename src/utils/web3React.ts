@@ -1,27 +1,27 @@
-import {InjectedConnector} from '@web3-react/injected-connector'
-import {WalletConnectConnector} from '@web3-react/walletconnect-connector'
-import {AbstractConnector} from '@web3-react/abstract-connector'
-import {BscConnector} from '@binance-chain/bsc-connector'
-import {ConnectorNames} from '@theia-my/uikit'
-import {hexlify} from '@ethersproject/bytes'
-import {toUtf8Bytes} from '@ethersproject/strings'
-import {ExternalProvider, JsonRpcFetchFunc, Web3Provider} from '@ethersproject/providers'
-import {CHAIN_ID} from 'config/constants/networks'
+import { InjectedConnector } from '@web3-react/injected-connector'
+import { WalletConnectConnector } from '@web3-react/walletconnect-connector'
+import { AbstractConnector } from '@web3-react/abstract-connector'
+import { BscConnector } from '@binance-chain/bsc-connector'
+import { ConnectorNames } from '@theia-my/uikit'
+import { hexlify } from '@ethersproject/bytes'
+import { toUtf8Bytes } from '@ethersproject/strings'
+import { ExternalProvider, JsonRpcFetchFunc, Web3Provider } from '@ethersproject/providers'
+import { CHAIN_ID } from 'config/constants/networks'
 import getNodeUrl from './getRpcUrl'
 
 const POLLING_INTERVAL = 12000
 const rpcUrl = getNodeUrl()
 const chainId = parseInt(CHAIN_ID, 10)
 
-const injected = new InjectedConnector({supportedChainIds: [chainId]})
+const injected = new InjectedConnector({ supportedChainIds: [chainId] })
 
 const walletconnect = new WalletConnectConnector({
-  rpc: {[chainId]: rpcUrl},
+  rpc: { [chainId]: rpcUrl },
   qrcode: true,
   pollingInterval: POLLING_INTERVAL,
 })
 
-const bscConnector = new BscConnector({supportedChainIds: [chainId]})
+const bscConnector = new BscConnector({ supportedChainIds: [chainId] })
 
 export const connectorsByName: { [connectorName in ConnectorNames]: any } = {
   [ConnectorNames.Injected]: injected,
@@ -40,10 +40,10 @@ export const getLibrary = (provider: ExternalProvider | JsonRpcFetchFunc): Web3P
  * @see https://docs.binance.org/smart-chain/wallet/wallet_api.html#binancechainbnbsignaddress-string-message-string-promisepublickey-string-signature-string
  */
 export const signMessage = async (
-    connector: AbstractConnector,
-    provider: any,
-    account: string,
-    message: string,
+  connector: AbstractConnector,
+  provider: any,
+  account: string,
+  message: string,
 ): Promise<string> => {
   if (window.BinanceChain && connector instanceof BscConnector) {
     const { signature } = await window.BinanceChain.bnbSign(account, message)

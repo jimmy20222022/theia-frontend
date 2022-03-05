@@ -7,8 +7,7 @@
 
 @font-face {
   font-family: 'EuclidSquare';
-  src: local('EuclidSquare'),
-    url('../../styles/fonts/EuclidSquare/EuclidSquare-BoldItalic.ttf') format('truetype');
+  src: local('EuclidSquare'), url('../../styles/fonts/EuclidSquare/EuclidSquare-BoldItalic.ttf') format('truetype');
   font-weight: 700;
   font-style: italic;
 }
@@ -29,8 +28,7 @@
 
 @font-face {
   font-family: 'EuclidSquare';
-  src: local('EuclidSquare'),
-    url('../../styles/fonts/EuclidSquare/EuclidSquare-LightItalic.ttf') format('truetype');
+  src: local('EuclidSquare'), url('../../styles/fonts/EuclidSquare/EuclidSquare-LightItalic.ttf') format('truetype');
   font-weight: 200;
   font-style: italic;
 }
@@ -44,8 +42,7 @@
 
 @font-face {
   font-family: 'EuclidSquare';
-  src: local('EuclidSquare'),
-    url('../../styles/fonts/EuclidSquare/EuclidSquare-MediumItalic.ttf') format('truetype');
+  src: local('EuclidSquare'), url('../../styles/fonts/EuclidSquare/EuclidSquare-MediumItalic.ttf') format('truetype');
   font-weight: 500;
   font-style: italic;
 }
@@ -59,16 +56,14 @@
 
 @font-face {
   font-family: 'EuclidSquare';
-  src: local('EuclidSquare'),
-    url('../../styles/fonts/EuclidSquare/EuclidSquare-SemiBold.ttf') format('truetype');
+  src: local('EuclidSquare'), url('../../styles/fonts/EuclidSquare/EuclidSquare-SemiBold.ttf') format('truetype');
   font-weight: 600;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'EuclidSquare';
-  src: local('EuclidSquare'),
-    url('../../styles/fonts/EuclidSquare/EuclidSquare-SemiBoldItalic.ttf') format('truetype');
+  src: local('EuclidSquare'), url('../../styles/fonts/EuclidSquare/EuclidSquare-SemiBoldItalic.ttf') format('truetype');
   font-weight: 600;
   font-style: italic;
 }

@@ -71,10 +71,7 @@ export default function CurrencyInputPanel({
   return (
     <Box id={id}>
       <Flex mb="6px" alignItems="center" justifyContent="space-between">
-        <CurrencySelectButton
-          className="open-currency-select-button"
-          selected={!!currency}
-        />
+        <CurrencySelectButton className="open-currency-select-button" selected={!!currency} />
       </Flex>
       <InputPanel>
         <Container>

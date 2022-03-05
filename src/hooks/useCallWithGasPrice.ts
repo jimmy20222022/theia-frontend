@@ -3,7 +3,7 @@ import { TransactionResponse } from '@ethersproject/providers'
 import { Contract, CallOverrides } from '@ethersproject/contracts'
 import get from 'lodash/get'
 import * as Sentry from '@sentry/react'
-import {useGasPrice} from "./useGasPrice";
+import { useGasPrice } from './useGasPrice'
 
 export function useCallWithGasPrice() {
   const gasPrice = useGasPrice()

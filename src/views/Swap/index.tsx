@@ -260,112 +260,112 @@ const User: React.FC<any> = () => {
 
   if (!account) {
     return (
-        <>
-          <Flex justifyContent="center">
-            <Text color="textSubtle" fontSize="30px">
-              Please connect wallet first.
-            </Text>
-          </Flex>
-        </>
+      <>
+        <Flex justifyContent="center">
+          <Text color="textSubtle" fontSize="30px">
+            Please connect wallet first.
+          </Text>
+        </Flex>
+      </>
     )
   }
 
   return (
-      <>
-        <div className="container">
-          <div className="row">
-            <div className="col-sm-4">
-              <Button disabled={refreshButtonUpdated} onClick={getBalance}>
-                Refresh balance
+    <>
+      <div className="container">
+        <div className="row">
+          <div className="col-sm-4">
+            <Button disabled={refreshButtonUpdated} onClick={getBalance}>
+              Refresh balance
+            </Button>
+            <CardBody>
+              <div>USDC balance in wallet = {USDCBalance}</div>
+              <div>USDG balance in wallet = {USDGBalance}</div>
+              <div>PUSDG balance in wallet = {PUSDGBalance}</div>
+              <div>SUSDG balance in wallet = {SUSDGBalance}</div>
+            </CardBody>
+            {approvedUSDCUpdated ? (
+              <Button disabled={approvedButtonUpdated} onClick={handleApprove}>
+                Approve USDC
               </Button>
-              <CardBody>
-                <div>USDC balance in wallet = {USDCBalance}</div>
-                <div>USDG balance in wallet = {USDGBalance}</div>
-                <div>PUSDG balance in wallet = {PUSDGBalance}</div>
-                <div>SUSDG balance in wallet = {SUSDGBalance}</div>
-              </CardBody>
-              {approvedUSDCUpdated ? (
-                  <Button disabled={approvedButtonUpdated} onClick={handleApprove}>
-                    Approve USDC
-                  </Button>
-              ) : (
-                  <></>
-              )}
-            </div>
-            <div className="col-sm-5">
-              <div className="row">
-                <div className="col-sm">
-                  <Button disabled={swapUSDCForUSDGUpdated} onClick={swapUSDCForUSDG}>
-                    Swap USDC For USDG
-                  </Button>
-                </div>
-                <div className="col-sm">
-                  <CurrencyInputPanel
-                      value={USDCQty}
-                      disableCurrencySelect
-                      onUserInput={handleUSDCQtyChange}
-                      id="swapUSDCForUSDG"
-                      showMaxButton={false}
-                      onCurrencySelect={() => null}
-                  />
-                </div>
-              </div>
-              <div className="row">
-                <div className="col-sm">
-                  <Button disabled={swapPUSDGForUSDGUpdated} onClick={swapPUSDGForUSDG}>
-                    Swap PUSDG For USDG
-                  </Button>
-                </div>
-                <div className="col-sm">
-                  <CurrencyInputPanel
-                      value={PUSDGQty}
-                      disableCurrencySelect
-                      onUserInput={handlePUSDGQtyChange}
-                      id="swapPUSDGForUSDG"
-                      showMaxButton={false}
-                      onCurrencySelect={() => null}
-                  />
-                </div>
-              </div>
-              <div className="row">
-                <div className="col-sm">
-                  <Button disabled={swapUSDCForPUSDGUpdated} onClick={swapUSDCForPUSDG}>
-                    Swap USDC For PUSDG
-                  </Button>
-                </div>
-                <div className="col-sm">
-                  <CurrencyInputPanel
-                      value={USDCQty}
-                      disableCurrencySelect
-                      onUserInput={handleUSDCQtyChange}
-                      id="swapUSDCForPUSDG"
-                      showMaxButton={false}
-                      onCurrencySelect={() => null}
-                  />
-                </div>
-              </div>
-              <div className="row">
-                <div className="col-sm">
-                  <Button disabled={swapPUSDGForUSDCUpdated} onClick={swapPUSDGForUSDC}>
-                    Swap PUSDG For USDC
-                  </Button>
-                </div>
-                <div className="col-sm">
-                  <CurrencyInputPanel
-                      value={PUSDGQty}
-                      disableCurrencySelect
-                      onUserInput={handlePUSDGQtyChange}
-                      id="swapPUSDGForUSDC"
-                      showMaxButton={false}
-                      onCurrencySelect={() => null}
-                  />
-                </div>
-              </div>
-            </div>
-            <div className="col-sm-3" />
+            ) : (
+              <></>
+            )}
           </div>
+          <div className="col-sm-5">
+            <div className="row">
+              <div className="col-sm">
+                <Button disabled={swapUSDCForUSDGUpdated} onClick={swapUSDCForUSDG}>
+                  Swap USDC For USDG
+                </Button>
+              </div>
+              <div className="col-sm">
+                <CurrencyInputPanel
+                  value={USDCQty}
+                  disableCurrencySelect
+                  onUserInput={handleUSDCQtyChange}
+                  id="swapUSDCForUSDG"
+                  showMaxButton={false}
+                  onCurrencySelect={() => null}
+                />
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-sm">
+                <Button disabled={swapPUSDGForUSDGUpdated} onClick={swapPUSDGForUSDG}>
+                  Swap PUSDG For USDG
+                </Button>
+              </div>
+              <div className="col-sm">
+                <CurrencyInputPanel
+                  value={PUSDGQty}
+                  disableCurrencySelect
+                  onUserInput={handlePUSDGQtyChange}
+                  id="swapPUSDGForUSDG"
+                  showMaxButton={false}
+                  onCurrencySelect={() => null}
+                />
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-sm">
+                <Button disabled={swapUSDCForPUSDGUpdated} onClick={swapUSDCForPUSDG}>
+                  Swap USDC For PUSDG
+                </Button>
+              </div>
+              <div className="col-sm">
+                <CurrencyInputPanel
+                  value={USDCQty}
+                  disableCurrencySelect
+                  onUserInput={handleUSDCQtyChange}
+                  id="swapUSDCForPUSDG"
+                  showMaxButton={false}
+                  onCurrencySelect={() => null}
+                />
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-sm">
+                <Button disabled={swapPUSDGForUSDCUpdated} onClick={swapPUSDGForUSDC}>
+                  Swap PUSDG For USDC
+                </Button>
+              </div>
+              <div className="col-sm">
+                <CurrencyInputPanel
+                  value={PUSDGQty}
+                  disableCurrencySelect
+                  onUserInput={handlePUSDGQtyChange}
+                  id="swapPUSDGForUSDC"
+                  showMaxButton={false}
+                  onCurrencySelect={() => null}
+                />
+              </div>
+            </div>
+          </div>
+          <div className="col-sm-3" />
         </div>
-      </>
+      </div>
+    </>
   )
 }
 

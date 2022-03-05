@@ -22,4 +22,3 @@ export const getPUSDGAddress = () => {
 export const getSUSDGAddress = () => {
   return getAddress(addresses.SUSDG)
 }
-

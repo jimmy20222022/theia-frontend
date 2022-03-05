@@ -14,8 +14,8 @@ const UserMenu = () => {
   const isWrongNetwork: boolean = error && error instanceof UnsupportedChainIdError
 
   useEffect(() => {
-      setUserMenuText('')
-      setUserMenuVariable('default')
+    setUserMenuText('')
+    setUserMenuVariable('default')
   }, [t])
 
   const UserMenuItems = () => {
