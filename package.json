@@ -1,5 +1,5 @@
 {
-  "name": "theia-frontend-clean-base",
+  "name": "pancake-frontend",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -18,16 +18,20 @@
     "postinstall": "yarn run typechain",
     "typechain": "typechain --out-dir src/config/abi/types --target=ethers-v5 \"src/config/abi/*.json\""
   },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
   "dependencies": {
-    "next": "12.1.0",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
-    "@sentry/nextjs": "^6.17.9",
-    "styled-components": "^5.3.0",
-    "@theia-my/uikit": "^1.0.0",
-    "lodash": "^4.17.21",
     "@binance-chain/bsc-connector": "^1.0.0",
-    "@web3-react/core": "^6.1.9",
     "@ethersproject/abi": "^5.5.0",
     "@ethersproject/address": "^5.5.0",
     "@ethersproject/bignumber": "^5.5.0",
@@ -38,32 +42,45 @@
     "@ethersproject/providers": "^5.5.2",
     "@ethersproject/strings": "^5.5.0",
     "@ethersproject/units": "^5.5.0",
+    "@next/bundle-analyzer": "^12.0.7",
+    "@pancakeswap/sdk": "^2.4.0",
+    "@theia-my/uikit": "^1.0.0",
+    "@sentry/nextjs": "^6.17.9",
     "@web3-react/core": "^6.1.9",
     "@web3-react/injected-connector": "^6.0.7",
     "@web3-react/walletconnect-connector": "6.2.4",
-    "@web3-react/abstract-connector": "^6.0.7",
-    "@pancakeswap/sdk": "^2.4.0",
-    "@next/bundle-analyzer": "^12.0.7",
+    "ajv": "^6.12.3",
     "bignumber.js": "^9.0.0",
+    "fast-json-stable-stringify": "^2.1.0",
+    "lodash": "^4.17.21",
+    "next": "^12.0.9",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
     "react-transition-group": "^4.4.1",
+    "styled-components": "^5.3.0",
     "swr": "^1.1.2",
-    "react-icons": "^4.3.1",
+    "typescript": "^4.5.4",
     "aos": "^3.0.0-beta.6",
     "sass": "^1.49.8",
     "bootstrap": "^5.1.3",
-    "prettier": "^2.3.0",
-    "@typescript-eslint/eslint-plugin": "^5.0.0",
-    "@typescript-eslint/parser": "^5.0.0"
+    "react-icons": "^4.3.1",
+    "prettier": "^2.3.0"
   },
   "devDependencies": {
-    "@types/node": "17.0.21",
-    "@types/react": "17.0.39",
-    "eslint": "8.10.0",
-    "eslint-config-next": "12.1.0",
-    "typescript": "4.6.2",
+    "@commitlint/cli": "^13.1.0",
+    "@commitlint/config-conventional": "^13.1.0",
+    "@next/eslint-plugin-next": "^12.0.10",
+    "@pancakeswap/eslint-config-pancake": "^1.1.0",
+    "@typechain/ethers-v5": "^8.0.5",
     "@types/lodash": "^4.14.178",
-    "@types/styled-components": "^5.1.7",
+    "@types/node": "^13.13.5",
+    "@types/react": "^17.0.5",
     "@types/react-transition-group": "^4.4.1",
-    "@pancakeswap/eslint-config-pancake": "^1.1.0"
+    "@types/styled-components": "^5.1.7",
+    "eslint": "^7.26.0",
+    "husky": "^7.0.0",
+    "prettier": "^2.3.0",
+    "typechain": "^6.1.0",
+    "pretty-quick": "^3.1.3"
   }
 }

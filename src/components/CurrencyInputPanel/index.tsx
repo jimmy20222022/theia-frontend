@@ -64,8 +64,8 @@ export default function CurrencyInputPanel({
   disableCurrencySelect = false,
   // otherCurrency,
   id,
-  // showCommonBases,
-}: CurrencyInputPanelProps) {
+}: // showCommonBases,
+CurrencyInputPanelProps) {
   const { account } = useActiveWeb3React()
 
   return (

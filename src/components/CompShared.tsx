@@ -131,7 +131,9 @@ function Section(props) {
           <div className="content col-lg-6">
             <Content>
               <img src={data.logo} alt="logo" data-aos="fade-right" data-aos-delay="50" />
-              <h2 data-aos="fade-right" data-aos-delay="200">{data.title}</h2>
+              <h2 data-aos="fade-right" data-aos-delay="200">
+                {data.title}
+              </h2>
               <Desc dangerouslySetInnerHTML={{ __html: data.desc }} data-aos="fade-right" data-aos-delay="200" />
 
               {data.buttonTitle && (
