@@ -34,7 +34,7 @@ const NavList = styled.ul`
   right: 0;
   top: 0;
   width: 100vw;
-  height: 100vh;
+  height: 90vh;
   padding: 30px 0;
   z-index: 300;
   background: #ffffff;
@@ -147,15 +147,15 @@ function TheHeader() {
             </Link>
           </p>
 
-          <p>
-            <Link href="/earn">
-              {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-              <a>Earn</a>
-            </Link>
-          </p>
+          {/*<p>*/}
+          {/*  <Link href="/earn">*/}
+          {/*    /!* eslint-disable-next-line jsx-a11y/anchor-is-valid *!/*/}
+          {/*    <a>Earn</a>*/}
+          {/*  </Link>*/}
+          {/*</p>*/}
 
           <p>
-            <UserMenu />
+            <UserMenu setIsActiveMenu={setIsActiveMenu}/>
           </p>
         </NavList>
       </DIV>

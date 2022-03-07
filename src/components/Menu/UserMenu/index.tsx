@@ -5,7 +5,7 @@ import useAuth from 'hooks/useAuth'
 import ConnectWalletButton from 'components/ConnectWalletButton'
 import { useTranslation } from 'contexts/Localization'
 
-const UserMenu = () => {
+const UserMenu = (props) => {
   const { t } = useTranslation()
   const { account, error } = useWeb3React()
   const { logout } = useAuth()
@@ -47,7 +47,7 @@ const UserMenu = () => {
     )
   }
 
-  return <ConnectWalletButton scale="sm" />
+  return <ConnectWalletButton scale="sm" setIsActiveMenu={props.setIsActiveMenu}/>
 }
 
 export default UserMenu

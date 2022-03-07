@@ -1114,10 +1114,10 @@
     "@styled-system/core" "^5.1.2"
     "@styled-system/css" "^5.1.5"
 
-"@theia-my/uikit@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@theia-my/uikit/-/uikit-1.0.0.tgz#d084d116e5def16907a80e8e1bf0f832c5681afe"
-  integrity sha512-zj+AvHbG+7uXjlLs0MESx4looVbRg61rXlsWs0jb3iVZJ7e8fsGDv8gCCcpB4sIhw/5xP6AngxbIavHHFoltpg==
+"@theia-my/uikit@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@theia-my/uikit/-/uikit-1.1.0.tgz#214f808b42152c29e79c49f8d098ab8e17bb75ca"
+  integrity sha512-9l2Hn43juJRyOV9f+0L9eYcvYmPigi+Gy1QA47EJuSRybfgDDdKeDJg/kIPdxTaZ3q7+JQ75DjH70S7OXs9gyw==
   dependencies:
     "@popperjs/core" "^2.9.2"
     "@types/styled-system" "^5.1.10"

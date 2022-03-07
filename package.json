@@ -44,7 +44,7 @@
     "@ethersproject/units": "^5.5.0",
     "@next/bundle-analyzer": "^12.0.7",
     "@pancakeswap/sdk": "^2.4.0",
-    "@theia-my/uikit": "^1.0.0",
+    "@theia-my/uikit": "^1.1.0",
     "@sentry/nextjs": "^6.17.9",
     "@web3-react/core": "^6.1.9",
     "@web3-react/injected-connector": "^6.0.7",
