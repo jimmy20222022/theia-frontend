@@ -4,7 +4,7 @@ import { GrClose } from 'react-icons/gr'
 import styled from 'styled-components'
 import Link from 'next/link'
 import UserMenu from '../../components/Menu/UserMenu'
-import useMatchBreakpoints from "../../hooks/useMatchBreakpoints";
+import useMatchBreakpoints from '../../hooks/useMatchBreakpoints'
 
 const Header = styled.header`
   height: 90px;
@@ -94,11 +94,11 @@ const DIV = styled.div`
 `
 
 function TheHeader() {
-  const { isMobile } = useMatchBreakpoints();
+  const { isMobile } = useMatchBreakpoints()
   const [isActiveMenu, setIsActiveMenu] = useState(false)
 
   function closeMenuIfMobile() {
-    if(isMobile) {
+    if (isMobile) {
       setIsActiveMenu(!isActiveMenu)
     }
   }
@@ -128,7 +128,7 @@ function TheHeader() {
           </p>
 
           <p>
-            <Link href="/usdg" >
+            <Link href="/usdg">
               <a onClick={() => closeMenuIfMobile()}>USDG</a>
             </Link>
           </p>
