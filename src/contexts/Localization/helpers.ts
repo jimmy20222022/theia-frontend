@@ -6,8 +6,7 @@ export const LS_KEY = 'pancakeswap_language'
 
 export const fetchLocale = async (locale) => {
   const response = await fetch(`${publicUrl}/locales/${locale}.json`)
-  const data = await response.json()
-  return data
+  return await response.json()
 }
 
 export const getLanguageCodeFromLS = () => {
@@ -18,6 +17,4 @@ export const getLanguageCodeFromLS = () => {
   } catch {
     return EN.locale
   }
-
-  return EN.locale
 }
