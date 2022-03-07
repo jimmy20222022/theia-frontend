@@ -1,9 +1,10 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 import { GiHamburgerMenu } from 'react-icons/gi'
 import { GrClose } from 'react-icons/gr'
 import styled from 'styled-components'
 import Link from 'next/link'
 import UserMenu from '../../components/Menu/UserMenu'
+import useMatchBreakpoints from "../../hooks/useMatchBreakpoints";
 
 const Header = styled.header`
   height: 90px;
@@ -93,8 +94,15 @@ const DIV = styled.div`
 `
 
 function TheHeader() {
+  const { isMobile } = useMatchBreakpoints();
   const [isActiveMenu, setIsActiveMenu] = useState(false)
-  //
+
+  function closeMenuIfMobile() {
+    if(isMobile) {
+      setIsActiveMenu(!isActiveMenu)
+    }
+  }
+
   return (
     <Header>
       <DIV>
@@ -120,30 +128,26 @@ function TheHeader() {
           </p>
 
           <p>
-            <Link href="/usdg">
-              {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-              <a>USDG</a>
+            <Link href="/usdg" >
+              <a onClick={() => closeMenuIfMobile()}>USDG</a>
             </Link>
           </p>
 
           <p>
             <Link href="/whytheia">
-              {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-              <a>Why Theia?</a>
+              <a onClick={() => closeMenuIfMobile()}>Why Theia?</a>
             </Link>
           </p>
 
           <p>
             <Link href="/audit">
-              {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-              <a>Audit</a>
+              <a onClick={() => closeMenuIfMobile()}>Audit</a>
             </Link>
           </p>
 
           <p>
             <Link href="/swap">
-              {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-              <a>Swap</a>
+              <a onClick={() => closeMenuIfMobile()}>Swap</a>
             </Link>
           </p>
 
@@ -155,7 +159,7 @@ function TheHeader() {
           {/*</p>*/}
 
           <p>
-            <UserMenu setIsActiveMenu={setIsActiveMenu}/>
+            <UserMenu setIsActiveMenu={setIsActiveMenu} />
           </p>
         </NavList>
       </DIV>

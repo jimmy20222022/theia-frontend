@@ -47,7 +47,7 @@ const UserMenu = (props) => {
     )
   }
 
-  return <ConnectWalletButton scale="sm" setIsActiveMenu={props.setIsActiveMenu}/>
+  return <ConnectWalletButton scale="sm" setIsActiveMenu={props.setIsActiveMenu} />
 }
 
 export default UserMenu

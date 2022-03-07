@@ -8,7 +8,13 @@ const ConnectWalletButton = (props) => {
   const { login, logout } = useAuth()
   const { onPresentConnectModal } = useWalletModal(login, logout, t)
   return (
-    <Button onClick={() => { onPresentConnectModal(); props.setIsActiveMenu(false);}} {...props}>
+    <Button
+      onClick={() => {
+        onPresentConnectModal()
+        props.setIsActiveMenu(false)
+      }}
+      {...props}
+    >
       <Trans>Connect Wallet</Trans>
     </Button>
   )
